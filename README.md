@@ -83,17 +83,17 @@ Most of those properties will provide its content like this:
 
 ```kotlin
 class IndexHTML {
-  val value: HTML by lazy {
+    val value: HTML by lazy {
     ...
-  }
+    }
 }
 // or:
 class IndexStyleSheet {
-  companion object {
-	  val value = StyleSheet(
-	  ...
-	  )
-  }
+    companion object {
+        val value = StyleSheet(
+        ...
+        )
+    }
 }
 ```
 
@@ -113,8 +113,8 @@ import Everything.Common.*
 
 class EndScripts {
   companion object {
-	  private val paypalScript = {
-		  val paypalModalSection = document.elementWith(id = IndexWebID.paypal)
+    private val paypalScript = {
+      val paypalModalSection = document.elementWith(id = IndexWebID.paypal)
         ...
     }
     // more scripts...
@@ -128,11 +128,11 @@ All scripts share a common file, which should be place in: **Kotlin2JavaScript/s
 import Everything.Common.*
 
 enum class IndexWebClass: CSSClass {
-   sectionsWidth, paypalButton, inputPayPal, ...
+    sectionsWidth, paypalButton, inputPayPal, ...
 }
 
 enum class IndexWebID: CSSID {
-   mainSection, paypal, showPayPalOptions, ...
+    mainSection, paypal, showPayPalOptions, ...
 }
 ```
 
