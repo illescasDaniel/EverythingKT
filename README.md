@@ -8,6 +8,8 @@ EKT is a Kotlin library which helps **developing Websites in a more simple, clea
 
 One of the main goals is not to use multiple languages directly (HTML, CSS, JS, SQL...), but instead using one which you can use to represent everything (paragraphs, links, styles, etc) in a way that it will **automatically translate from Kotlin to all the other languages** with the **proper code verifications** to minimise the errors. It also allows the developers to **share some code with Android apps** (made in Kotlin).
 
+<img src="docs/images/Standard-Web-Diagram.png" width="200"> <img src="docs/images/EVT-Diagram.jpg" width="240"> 
+
 ## Table of contents
 
 *   [Key points](https://github.com/illescasDaniel/EverythingKT#key-points)
@@ -30,6 +32,8 @@ One of the main goals is not to use multiple languages directly (HTML, CSS, JS, 
 
 In an Web developers world where you have to use up to 5 different languages, all interpreted, on the same Website, it is sometimes quite difficult to maintain code like that or to interact between all of them.
 
+<img src="docs/images/Standard-Lenguages.png" width="200"> 
+
 I'd love to see another unified, non-interpreted, highly advanced language to completely replace the Web; but that's something out of my hand, so I decided to create a library to create your websites with the advantages I just mentioned and without the hassels of the standard development.
 
 ### Current Status
@@ -44,11 +48,13 @@ This is a base version for what I have planned for EKT, but anyone can create wh
 
 ### Code examples
 
+<img src="docs/images/Code-example.png" width="500"> 
+
 #### Starting the NodeJS integrated Web Server
 
 ```kotlin
 val server = Server(port = 3000, listenHandler = { portNumber ->
-   println("Listening on port: $portNumber")
+    println("Listening on port: $portNumber")
 }, routeGetHandler = { _, response ->
     val web = IndexWeb()
     web.html.writeOutputToPageFolder()
