@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> EverythingKT </title>
+	<link rel="stylesheet" href="styles/github.css">
+	<script src="scripts/highlight.pack.js" charset="UTF-8">
+	</script>
+	<script src="kotlin2JS/index.js" charset="UTF-8">
+	</script>
+	<script src="kotlin2JS/output_HEAD.js" charset="UTF-8">
+	</script>
+</head>
+<style>
+	header {
+		background-color: #e6e6e6;
+		color: #ffffff;
+		font-family: Arial;
+	}
+
+	footer {
+		background-color: #e6e6e6;
+		color: #262626;
+		font-size: 17px;
+		font-family: Arial;
+	}
+
+	a:hover {
+		opacity: 0.9;
+	}
+
+	#paypal {
+		margin-bottom: 5em;
+		display: none;
+		margin: 0.75em;
+	}
+
+	#mainSection {
+		margin-top: 4em;
+		margin-bottom: 4em;
+		width: 100%;
+	}
+
+	.sectionsWidth {
+		width: 50%;
+	}
+
+	.paypalButton {
+		height: 2em;
+		width: 4em;
+		margin: 0.25em;
+	}
+
+	.elementMargin {
+		margin: 15px;
+	}
+
+	.verticalStackWithoutTopMargin {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+		height: 3em auto;
+		font-family: Arial;
+	}
+
+	.horizontalStackSpaced {
+		display: flex;
+		flex-flow: row no-wrap;
+		justify-content: space-between;
+		align-items: center;
+		align-content: stretch;
+		margin-left: 1em;
+		margin-right: 1em;
+		height: 3em auto;
+	}
+
+	.inputPayPal {
+		height: 1.75em;
+		width: 16em;
+		margin-left: 0.5em;
+	}
+
+	.horizontalStack {
+		display: flex;
+		flex-flow: row no-wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+		margin-left: 1em;
+		margin-right: 1em;
+		height: 3em auto;
+	}
+
+	.verticalStack {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+		margin-left: 1em;
+		margin-right: 1em;
+		margin-top: 2em;
+		height: 3em auto;
+		font-family: Arial;
+	}
+
+	.logoImage {
+		height: 8em;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		align-self: flex-start;
+	}
+
+	.logoBackgroundGradient {
+		background: linear-gradient(to right, #3399CC, #7D6FDC, #C266CC, #C266CC, #FF9933);
+		opacity: 0.9;
+	}
+
+	.linkButton {
+		background-color: #404040;
+		opacity: 0.8;
+		border-radius: 12px;
+		box-shadow: 2px 2px 1px #222222;
+		text-decoration: none;
+		color: inherit;
+	}
+</style>
+
+<body>
+	<script src="kotlin2JS/output_START.js" charset="UTF-8">
+	</script>
+	<header class="logoBackgroundGradient">
+		<div class="verticalStack">
+			<div class="horizontalStack">
+				<a class="linkButton" href="#" target="_self">
+					<p id="testParagraph" class="elementMargin" style="font-size: 17px; font-family: Arial;"> Documentation </p>
+				</a> <img class="logoImage elementMargin" alt="Logo" src="images/logoWithShadow.png">
+				<a class="linkButton" href="download/Test.txt" target="_self">
+					<p class="elementMargin"> Download </p>
+				</a>
+			</div>
+			<p id="testParagraph2" class="elementMargin"> A library for web development </p>
+		</div>
+	</header>
+	<section id="mainSection" class="verticalStack">
+		<section class="verticalStack sectionsWidth">
+			<h2> Overview: </h2>
+			<p> EverythingKT is a Kotlin library which helps developing websites in a more simple, clear and faster way. It's aimed to developers with previous programming knowledge that pretend to create quality websites in short time. </p>
+		</section>
+		<section class="verticalStack sectionsWidth">
+			<h2> Motivation: </h2>
+			<p> One of the main goals is not to use multiple languages directly (HTML, CSS, JS, PHP...), but instead using one which you can utilise to represent everything (paragraphs, links, styles, etc) in a way that it will translate from Kotlin to all the other
+				languages. </p>
+		</section>
+		<section class="verticalStack sectionsWidth">
+			<h2> Code Example: </h2>
+			<pre>
+				<code>
+				// STYLE
+
+classStyles["bodyStyle"] = CssStyle(
+    Css.fontFamily to "sans-serif"
+)
+
+val flexBoxHeader = Flexbox(flow = Flexbox.rowWrap,
+                    justifyContent = Flexbox.JustifyContent.spaceAround,
+                    alignItems = Flexbox.AlignItems.center)
+
+classStyles["headerStyle"] = CssStyle(
+        *flexBoxHeader.properties,
+        Css.backgroundColor to Color.lightYellow.hexValue
+)
+
+// HTML
+
+this.document =
+
+html {
+    metadata = Metadata("Page Title")
+    body = body {
+        nested = arrayListOf(
+
+                header {
+                    arrayListOf(
+                            paragraph("Hello!")
+                    )
+                },
+
+                section {
+                    id = "bodySection"
+                    inlineStyle = InlineStyle(
+                            Css.margin to "20"
+                    )
+                    arrayListOf(
+                            paragraph("Text here") {
+                                this.script = script {
+                                    console.log("Hi!!")
+                                }
+                            },
+                            heading(Heading.Level.highest, "Title"),
+                            list(
+                                    listItem("Tomatoes"),
+                                    listItem("Pineapple") {
+                                        inlineStyle = InlineStyle (
+                                            Css.color to "red"
+                                        )
+                                    }
+                            )
+                    )
+                }
+        )
+    }
+}
+
+// SERVER
+val server = Server(indexContent = Index.html, port = 3000)
+			</code>
+			</pre> </section>
+		<section class="verticalStack">
+			<h2> Changelog </h2>
+			<table id="changelogTable">
+				<thead>
+					<th> Version </th>
+					<th> Description </th>
+					<th> Date </th>
+				</thead>
+				<tbody>
+					<tr>
+						<td> 1.1 </td>
+						<td> Improved JS & SQL </td>
+						<td> 2018-03-11T23:00:00.000Z </td>
+					</tr>
+					<tr>
+						<td> 1.0.1 </td>
+						<td> Bug fixes </td>
+						<td> 2017-11-26T23:00:00.000Z </td>
+					</tr>
+					<tr>
+						<td> 1.0 </td>
+						<td> Initial Pre-Release </td>
+						<td> 2017-11-26T23:00:00.000Z </td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section class="verticalStack">
+			<h2> PayPal.Me </h2> <button id="showPayPalOptions" type="button" autofocus>
+				Show Options
+			</button>
+			<section id="paypal" class="test horizontalStack"> <button id="twoEurPayPal" class="paypalButton" type="button" autofocus>
+				2€
+			</button> <button id="fiveEurPaypal" class="paypalButton" type="button" autofocus>
+				5€
+			</button> <label>
+				<input id="customEurPayPal" class="inputPayPal" type="number" placeholder="Custom amount in €">
+			</label> </section>
+		</section>
+	</section>
+	<footer>
+		<div class="horizontalStackSpaced">
+			<h5> © 2017 EverythingKT </h5>
+			<p> Designed by Daniel Illescas </p>
+		</div>
+	</footer>
+	<script src="kotlin2JS/output_END.js" charset="UTF-8">
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "EverythingKT",
+  "version": "1.0.0",
+  "description": "EverythingKT - MPL-2.0",
+  "main": "index.js",
+  "dependencies": {
+    "esdoc": "^1.1.0",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "kotlin": "^1.2.41",
+    "moxygen": "^0.7.12",
+    "mysql": "^2.15.0",
+    "node.js": "0.0.0",
+    "npm": "^5.10.0",
+    "request": "^2.85.0",
+    "sync": "^0.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node node/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/illescasDaniel/EverythingKT.git"
+  },
+  "author": "Daniel Illescas Romero",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/illescasDaniel/EverythingKT/issues"
+  },
+  "homepage": "https://github.com/illescasDaniel/EverythingKT#readme"
+}
