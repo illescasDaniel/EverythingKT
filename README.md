@@ -5,6 +5,7 @@
 [![Version](https://img.shields.io/badge/language-Kotlin-green.svg)](https://kotlinlang.org)
 
 EKT is a Kotlin library which helps **developing Websites in a more simple, clear and faster way**. It's aimed to developers with previous programming knowledge that pretend to avoid most syntactic errors and want an easy way of deploying the websites.
+
 One of the main goals is not to use multiple languages directly (HTML, CSS, JS, SQL...), but instead using one which you can use to represent everything (paragraphs, links, styles, etc) in a way that it will **automatically translate from Kotlin to all the other languages** with the **proper code verifications** to minimise the errors. It also allows the developers to **share some code with Android apps** (made in Kotlin).
 
 ## Table of contents
