@@ -8,7 +8,7 @@ EKT is a Kotlin library which helps **developing Websites in a more simple, clea
 
 One of the main goals is not to use multiple languages directly (HTML, CSS, JS, SQL...), but instead using one which you can use to represent everything (paragraphs, links, styles, etc) in a way that it will **automatically translate from Kotlin to all the other languages** with the **proper code verifications** to minimise the errors. It also allows the developers to **share some code with Android apps** (made in Kotlin).
 
-<img src="docs/images/Standard-Web-Diagram.png" width="200"> <img src="docs/images/EVT-Diagram.jpg" width="240"> 
+<img src="docs/images/Standard-Web-Diagram.png" width="200"> <img src="docs/images/EVT-Diagram.png" width="240"> 
 
 ## Table of contents
 
@@ -48,7 +48,7 @@ This is a base version for what I have planned for EKT, but anyone can create wh
 
 ### Code examples
 
-<img src="docs/images/Code-example.png" width="500"> 
+<img src="docs/images/Code-example.png" width="600"> 
 
 #### Starting the NodeJS integrated Web Server
 
