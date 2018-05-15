@@ -6,7 +6,7 @@ package Everything.WebDocument
 
 import Everything.*
 
-@Deprecated(message = "This Website class could be replaced or changed in the future, we strongly recommend using WebDocument now.",
+@Deprecated(message = "This class could be replaced or changed in the future, we strongly recommend using WebDocument now.",
 		replaceWith = ReplaceWith("WebDocument", "import Everything.WebDocument.WebDocument"))
 abstract class Website {
 

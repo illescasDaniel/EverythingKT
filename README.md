@@ -18,7 +18,7 @@ One of the main goals is not to use multiple languages directly (HTML, CSS, JS, 
 *   [Code examples](https://github.com/illescasDaniel/EverythingKT#code-examples)
     *   [Starting the NodeJS integrated Web Server](https://github.com/illescasDaniel/EverythingKT#starting-the-nodejs-integrated-web-server)
     *   [Creating your first WebDocument](https://github.com/illescasDaniel/EverythingKT#creating-your-first-webdocument)
-    *   [Using JavaScript in Kotlin](https://github.com/illescasDaniel/EverythingKT#using-javascript-in-kotlin))
+    *   [Using JavaScript in Kotlin](https://github.com/illescasDaniel/EverythingKT#using-javascript-in-kotlin)
 *   [Installation](https://github.com/illescasDaniel/EverythingKT#installation)
 *   [License](https://github.com/illescasDaniel/EverythingKT#license)
 

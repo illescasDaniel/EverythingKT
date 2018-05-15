@@ -134,7 +134,7 @@ class IndexHTML(val allRows: ArrayList<Row>) {
 							section(cssClass = IndexWebClass.verticalStack) { arrayListOf(
 									heading(Heading.Level.higher, content = "PayPal.Me"),
 									button(id = IndexWebID.showPayPalOptions, content = "Show Options"),
-									section(id = IndexWebID.paypal, cssClass = classesFrom("test", "horizontalStack")) {// ~ IndexWebClass.horizontalStack
+									section(id = IndexWebID.paypal, cssClass = classesFrom("test", "horizontalStack")) { // ~ IndexWebClass.horizontalStack
 										arrayListOf(
 												button(id = IndexWebID.twoEurPayPal, cssClass = IndexWebClass.paypalButton, content = "2€"),
 												button(id = IndexWebID.fiveEurPaypal, cssClass = IndexWebClass.paypalButton, content = "5€"),
