@@ -51,9 +51,15 @@ open class Element(protected val name: String,
 		val endTag = if (this.content != null) "</$name>" else ""
 		val realContent = if (this.content != null) content?.trim() else ""
 
+		val escapedContent = if (this.name != ElementType.Preformatted.value && this.name != ElementType.Code.value)
+								realContent?.replace("&", "&amp;")
+							 else realContent
+				// ?.replace("<", "&lt;") // These are escaped only in the Code element
+				// ?.replace(">", "&gt;")
+
 		var element = """
 			${"\n"}<$name${allPropertiesInHTML.trimEnd()}>
-				$realContent${allNestedElementsInHTML.trim()}
+				$escapedContent${allNestedElementsInHTML.trim()}
 			$endTag
 		""".trimIndent()
 
@@ -78,7 +84,10 @@ class Code(content: String = "", id: CSSID? = null,
            properties: HashMap<String, String> = hashMapOf(),
            script: Script = Script({}),
            nested: ArrayList<Element> = arrayListOf()):
-		Element(ElementType.Code, content.trimIndent(), id, inlineStyle, cssClass, properties, script, nested) {
+		Element(
+				ElementType.Code,
+				content.trimIndent().replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"),
+				id, inlineStyle, cssClass, properties, script, nested) {
 
 	override val inHTML: String by lazy {
 		val preformatted = Element(ElementType.Preformatted, super.inHTML, id, inlineStyle, cssClass, properties, script, nested)

@@ -99,6 +99,7 @@ enum class ElementType(val value: String) {
 	Picture("picture"), Image("img"), Video("video"), Audio("audio"), Track("track"), Source("source"),
 	BlockQuote("blockquote"), Quote("q"),
 	Code("code"),
+	Pre("pre"),
 	Preformatted("pre"),
 	Canvas("canvas"),
 	Button("button"),

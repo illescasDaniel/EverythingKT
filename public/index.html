@@ -13,12 +13,6 @@
 	</script>
 </head>
 <style>
-	header {
-		background-color: #e6e6e6;
-		color: #ffffff;
-		font-family: Arial;
-	}
-
 	footer {
 		background-color: #e6e6e6;
 		color: #262626;
@@ -30,10 +24,10 @@
 		opacity: 0.9;
 	}
 
-	#paypal {
-		margin-bottom: 5em;
-		display: none;
-		margin: 0.75em;
+	header {
+		background-color: #e6e6e6;
+		color: #ffffff;
+		font-family: Arial;
 	}
 
 	#mainSection {
@@ -42,18 +36,10 @@
 		width: 100%;
 	}
 
-	.sectionsWidth {
-		width: 50%;
-	}
-
-	.paypalButton {
-		height: 2em;
-		width: 4em;
-		margin: 0.25em;
-	}
-
-	.elementMargin {
-		margin: 15px;
+	#paypal {
+		margin-bottom: 5em;
+		display: none;
+		margin: 0.75em;
 	}
 
 	.verticalStackWithoutTopMargin {
@@ -66,10 +52,10 @@
 		font-family: Arial;
 	}
 
-	.horizontalStackSpaced {
+	.horizontalStack {
 		display: flex;
 		flex-flow: row no-wrap;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		align-content: stretch;
 		margin-left: 1em;
@@ -83,10 +69,20 @@
 		margin-left: 0.5em;
 	}
 
-	.horizontalStack {
+	.paypalButton {
+		height: 2em;
+		width: 4em;
+		margin: 0.25em;
+	}
+
+	.sectionsWidth {
+		width: 50%;
+	}
+
+	.horizontalStackSpaced {
 		display: flex;
 		flex-flow: row no-wrap;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		align-content: stretch;
 		margin-left: 1em;
@@ -117,6 +113,10 @@
 	.logoBackgroundGradient {
 		background: linear-gradient(to right, #3399CC, #7D6FDC, #C266CC, #C266CC, #FF9933);
 		opacity: 0.9;
+	}
+
+	.elementMargin {
+		margin: 15px;
 	}
 
 	.linkButton {
@@ -230,7 +230,7 @@ val server = Server(indexContent = Index.html, port = 3000)
 				<tbody>
 					<tr>
 						<td> 1.1 </td>
-						<td> Improved JS & SQL </td>
+						<td> Improved JS &amp; SQL </td>
 						<td> 2018-03-11T23:00:00.000Z </td>
 					</tr>
 					<tr>
