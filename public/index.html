@@ -13,6 +13,10 @@
 	</script>
 </head>
 <style>
+	a:hover {
+		opacity: 0.9;
+	}
+
 	header {
 		background-color: #e6e6e6;
 		color: #ffffff;
@@ -26,8 +30,10 @@
 		font-family: Arial;
 	}
 
-	a:hover {
-		opacity: 0.9;
+	#mainSection {
+		margin-top: 4em;
+		margin-bottom: 4em;
+		width: 100%;
 	}
 
 	#paypal {
@@ -36,37 +42,47 @@
 		margin: 0.75em;
 	}
 
-	#mainSection {
-		margin-top: 4em;
-		margin-bottom: 4em;
-		width: 100%;
-	}
-
 	.sectionsWidth {
 		width: 50%;
 	}
 
-	.logoImage {
-		height: 8em;
-		padding-top: 3px;
-		padding-bottom: 3px;
-		align-self: flex-start;
+	.logoBackgroundGradient {
+		background: linear-gradient(to right, #3399CC, #7D6FDC, #C266CC, #C266CC, #FF9933);
+		opacity: 0.9;
 	}
 
-	.elementMargin {
-		margin: 15px;
+	.verticalStack {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+		margin-left: 1em;
+		margin-right: 1em;
+		margin-top: 2em;
+		height: 3em auto;
+		font-family: Arial;
 	}
 
-	.paypalButton {
-		height: 2em;
-		width: 4em;
-		margin: 0.25em;
+	.linkButton {
+		background-color: #404040;
+		opacity: 0.8;
+		border-radius: 12px;
+		box-shadow: 2px 2px 1px #222222;
+		text-decoration: none;
+		color: inherit;
 	}
 
 	.inputPayPal {
 		height: 1.75em;
 		width: 16em;
 		margin-left: 0.5em;
+	}
+
+	.paypalButton {
+		height: 2em;
+		width: 4em;
+		margin: 0.25em;
 	}
 
 	.horizontalStack {
@@ -91,19 +107,6 @@
 		height: 3em auto;
 	}
 
-	.verticalStack {
-		display: flex;
-		flex-flow: column wrap;
-		justify-content: center;
-		align-items: center;
-		align-content: stretch;
-		margin-left: 1em;
-		margin-right: 1em;
-		margin-top: 2em;
-		height: 3em auto;
-		font-family: Arial;
-	}
-
 	.verticalStackWithoutTopMargin {
 		display: flex;
 		flex-flow: column wrap;
@@ -114,18 +117,15 @@
 		font-family: Arial;
 	}
 
-	.logoBackgroundGradient {
-		background: linear-gradient(to right, #3399CC, #7D6FDC, #C266CC, #C266CC, #FF9933);
-		opacity: 0.9;
+	.logoImage {
+		height: 8em;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		align-self: flex-start;
 	}
 
-	.linkButton {
-		background-color: #404040;
-		opacity: 0.8;
-		border-radius: 12px;
-		box-shadow: 2px 2px 1px #222222;
-		text-decoration: none;
-		color: inherit;
+	.elementMargin {
+		margin: 15px;
 	}
 </style>
 
@@ -136,7 +136,7 @@
 		<div class="verticalStack">
 			<div class="horizontalStack">
 				<a class="linkButton" href="#" target="_self">
-					<p id="testParagraph" class="elementMargin" style="font-size: 17px; font-family: Arial;"> Documentation </p>
+					<p id="testParagraph" class="elementMargin" style="font-size: 17px; font-family: Arial;"> Documentation&lt;p&gt;hi&lt;/p&gt; </p>
 				</a> <img class="logoImage elementMargin" alt="Logo" src="images/logoWithShadow.png">
 				<a class="linkButton" href="download/Test.txt" target="_self">
 					<p class="elementMargin"> Download </p>
@@ -158,7 +158,7 @@
 		<section class="verticalStack sectionsWidth">
 			<h2> Code Example: </h2>
 			<pre>
-				<code>
+				&lt;code&gt;
 				// STYLE
 
 classStyles["bodyStyle"] = CssStyle(
@@ -217,7 +217,7 @@ html {
 
 // SERVER
 val server = Server(indexContent = Index.html, port = 3000)
-			</code>
+			&lt;/code&gt;
 			</pre> </section>
 		<section class="verticalStack">
 			<h2> Changelog </h2>
@@ -230,7 +230,7 @@ val server = Server(indexContent = Index.html, port = 3000)
 				<tbody>
 					<tr>
 						<td> 1.1 </td>
-						<td> Improved JS &amp; SQL </td>
+						<td> Improved JS & SQL </td>
 						<td> 2018-03-11T23:00:00.000Z </td>
 					</tr>
 					<tr>
@@ -255,7 +255,7 @@ val server = Server(indexContent = Index.html, port = 3000)
 			</button> <button id="fiveEurPaypal" class="paypalButton" type="button" autofocus>
 				5€
 			</button> <label>
-				<input id="customEurPayPal" class="inputPayPal" type="number" placeholder="Custom amount in €">
+				&lt;input id="customEurPayPal" class="inputPayPal" type="number" placeholder="Custom amount in €"&gt;
 			</label> </section>
 		</section>
 	</section>

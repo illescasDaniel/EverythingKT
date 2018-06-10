@@ -1,6 +1,6 @@
 # EverythingKT
 
-[![Version](https://img.shields.io/badge/version-v1.0-brightgreen.svg)](https://github.com/illescasDaniel/EverythingKT/releases)
+[![Version](https://img.shields.io/badge/version-v1.0.1-brightgreen.svg)](https://github.com/illescasDaniel/EverythingKT/releases)
 [![license](https://img.shields.io/badge/license-MPL-blue.svg)](https://github.com/illescasDaniel/EverythingKT/blob/master/LICENSE)
 [![Language](https://img.shields.io/badge/language-Kotlin-green.svg)](https://kotlinlang.org)
 

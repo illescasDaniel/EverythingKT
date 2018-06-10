@@ -13,7 +13,8 @@ open class Element(protected val name: String,
                    var cssClass: CSSClass? = null,
                    var properties: HashMap<String, String> = hashMapOf(),
                    var script: Script = Script({}),
-                   var nested: ArrayList<Element> = arrayListOf()) {
+                   var nested: ArrayList<Element> = arrayListOf(),
+                   var escapeHTML: Boolean = true) {
 
 	constructor(name: ElementType,
 	            content: String? = "",
@@ -66,13 +67,16 @@ open class Element(protected val name: String,
 		validNestedElements.forEach { allNestedElementsInHTML += "\n${it.inHTML}" }
 
 		val endTag = if (this.content != null) "</$name>" else ""
-		val realContent = if (this.content != null) content?.trim() else ""
+		val realContent = if (this.content != null) content!!.trim() else ""
 
-		val escapedContent = if (this.name != ElementType.Preformatted.value && this.name != ElementType.Code.value)
-								realContent?.replace("&", "&amp;")
-							 else realContent
-				// ?.replace("<", "&lt;") // These are escaped only in the Code element
-				// ?.replace(">", "&gt;")
+		var escapedContent = realContent
+		if (this.name != ElementType.Preformatted.value && this.name != ElementType.Code.value) {
+			escapedContent = realContent.replace("&", "&amp;")
+		}
+		if (this.escapeHTML) {
+			escapedContent = realContent.replace("<", "&lt;")
+										.replace(">", "&gt;")
+		}
 
 		var element = """
 			${"\n"}<$name${allPropertiesInHTML.trimEnd()}>
