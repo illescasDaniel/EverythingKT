@@ -13,6 +13,12 @@
 	</script>
 </head>
 <style>
+	header {
+		background-color: #e6e6e6;
+		color: #ffffff;
+		font-family: Arial;
+	}
+
 	footer {
 		background-color: #e6e6e6;
 		color: #262626;
@@ -24,10 +30,10 @@
 		opacity: 0.9;
 	}
 
-	header {
-		background-color: #e6e6e6;
-		color: #ffffff;
-		font-family: Arial;
+	#paypal {
+		margin-bottom: 5em;
+		display: none;
+		margin: 0.75em;
 	}
 
 	#mainSection {
@@ -36,20 +42,31 @@
 		width: 100%;
 	}
 
-	#paypal {
-		margin-bottom: 5em;
-		display: none;
-		margin: 0.75em;
+	.sectionsWidth {
+		width: 50%;
 	}
 
-	.verticalStackWithoutTopMargin {
-		display: flex;
-		flex-flow: column wrap;
-		justify-content: center;
-		align-items: center;
-		align-content: stretch;
-		height: 3em auto;
-		font-family: Arial;
+	.logoImage {
+		height: 8em;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		align-self: flex-start;
+	}
+
+	.elementMargin {
+		margin: 15px;
+	}
+
+	.paypalButton {
+		height: 2em;
+		width: 4em;
+		margin: 0.25em;
+	}
+
+	.inputPayPal {
+		height: 1.75em;
+		width: 16em;
+		margin-left: 0.5em;
 	}
 
 	.horizontalStack {
@@ -61,22 +78,6 @@
 		margin-left: 1em;
 		margin-right: 1em;
 		height: 3em auto;
-	}
-
-	.inputPayPal {
-		height: 1.75em;
-		width: 16em;
-		margin-left: 0.5em;
-	}
-
-	.paypalButton {
-		height: 2em;
-		width: 4em;
-		margin: 0.25em;
-	}
-
-	.sectionsWidth {
-		width: 50%;
 	}
 
 	.horizontalStackSpaced {
@@ -103,20 +104,19 @@
 		font-family: Arial;
 	}
 
-	.logoImage {
-		height: 8em;
-		padding-top: 3px;
-		padding-bottom: 3px;
-		align-self: flex-start;
+	.verticalStackWithoutTopMargin {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+		height: 3em auto;
+		font-family: Arial;
 	}
 
 	.logoBackgroundGradient {
 		background: linear-gradient(to right, #3399CC, #7D6FDC, #C266CC, #C266CC, #FF9933);
 		opacity: 0.9;
-	}
-
-	.elementMargin {
-		margin: 15px;
 	}
 
 	.linkButton {

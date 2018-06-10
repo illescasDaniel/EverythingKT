@@ -15,8 +15,25 @@ open class Element(protected val name: String,
                    var script: Script = Script({}),
                    var nested: ArrayList<Element> = arrayListOf()) {
 
-	constructor(name: ElementType, content: String? = "", id: CSSID? = null, inlineStyle: InlineStyle? = null, cssClass: CSSClass? = null, properties: HashMap<String, String> = hashMapOf(), script: Script = Script({}), nested: ArrayList<Element> = arrayListOf()):
+	constructor(name: ElementType,
+	            content: String? = "",
+	            id: CSSID? = null,
+	            inlineStyle: InlineStyle? = null,
+	            cssClass: CSSClass? = null,
+	            properties: HashMap<String, String> = hashMapOf(),
+	            script: Script = Script({}),
+	            nested: ArrayList<Element> = arrayListOf()):
 			this(name.value, content, id, inlineStyle, cssClass, properties, script, nested)
+
+	constructor(name: String,
+	            content: String? = "",
+	            id: CSSID? = null,
+	            inlineStyle: InlineStyle? = null,
+	            cssClass: CSSClass? = null,
+	            properties: HashMap<String, Any>,
+	            script: Script = Script({}),
+	            nested: ArrayList<Element> = arrayListOf()):
+			this(name, content, id, inlineStyle, cssClass, HashMap<String,String>(properties.mapValues { it.toString() }), script, nested)
 
 	companion object {
 		val empty: Element
