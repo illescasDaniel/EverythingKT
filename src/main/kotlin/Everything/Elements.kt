@@ -72,10 +72,10 @@ open class Element(protected val name: String,
 		var escapedContent = realContent
 		if (this.name != ElementType.Preformatted.value && this.name != ElementType.Code.value) {
 			escapedContent = realContent.replace("&", "&amp;")
-		}
-		if (this.escapeHTML) {
-			escapedContent = realContent.replace("<", "&lt;")
-										.replace(">", "&gt;")
+			if (this.escapeHTML) {
+				escapedContent = realContent.replace("<", "&lt;")
+											.replace(">", "&gt;")
+			}
 		}
 
 		var element = """
