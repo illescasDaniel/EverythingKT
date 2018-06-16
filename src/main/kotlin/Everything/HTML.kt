@@ -56,7 +56,7 @@ class HTML(var fileName: String = "index",
 		val fileNameToWrite = "public/${this.fileName}.html"
 		FileSystem.writeFile(fileNameToWrite, this.inHTML)
 	}
-	
+
 	override val inHTML: String by lazy {
 		this.nested = arrayListOf(metadata, styleSheet, this.body, this.script.asElement)
 		super.inHTML

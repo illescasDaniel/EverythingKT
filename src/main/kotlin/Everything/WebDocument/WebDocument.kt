@@ -37,9 +37,9 @@ abstract class Website {
 
 	override fun toString() = this.inHTML
 
-	fun getJSWith(id: String): String? {
+	/*fun getJSWith(id: String): String? {
 		return this.html.elementWith(id)?.script?.inJS?.beautifiedJS
-	}
+	}*/
 
 	fun exportToFile() {
 		this.inHTML
@@ -71,7 +71,6 @@ abstract class WebDocument {
 			FileSystem.copyFile("./Kotlin2JavaScript/output/Kotlin2jsOutput_HEAD.js", "./public/kotlin2JS/output_HEAD.js")
 
 			this.document.metadata.externalScripts += arrayOf(
-					//Path("kotlin2JS/index.js"),
 					Path("kotlin2JS/output_HEAD.js")
 			)
 		}
@@ -81,7 +80,6 @@ abstract class WebDocument {
 			FileSystem.copyFile("./Kotlin2JavaScript/output/Kotlin2jsOutput_START.js", "./public/kotlin2JS/output_START.js")
 
 			this.document.body.startScripts += arrayOf(
-					//Path("kotlin2JS/index.js"),
 					Path("kotlin2JS/output_START.js")
 			)
 		}
@@ -91,7 +89,6 @@ abstract class WebDocument {
 			FileSystem.copyFile("./Kotlin2JavaScript/output/Kotlin2jsOutput_END.js", "./public/kotlin2JS/output_END.js")
 
 			this.document.body.endScripts += arrayOf(
-					//Path("kotlin2JS/index.js"),
 					Path("kotlin2JS/output_END.js")
 			)
 		}
@@ -108,9 +105,9 @@ abstract class WebDocument {
 
 	override fun toString() = this.inHTML
 
-	fun getJSWith(id: String): String? {
+	/*fun getJSWith(id: String): String? {
 		return this.html.elementWith(id)?.script?.inJS?.beautifiedJS
-	}
+	}*/
 
 	fun exportToFile() {
 		this.inHTML

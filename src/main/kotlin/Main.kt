@@ -31,6 +31,8 @@ fun main(args: Array<String>) {
 		}
 	})
 
+	// This is just an example of routing a POST request (like when using a form)
+	// It access the elements it sent like a username of password and it can access data from a database to later show a different website (or not)
 	server.routePOSTto("/test.html") { request, response ->
 
 		val password = request.body.password as String
@@ -54,10 +56,15 @@ fun main(args: Array<String>) {
 		})
 	}
 
+	// Another page example, remember you can have as many webDocuments as you want to show them in the Web
+	// Try: http://localhost:3000/test2.html
 	server.routeGETto("/test2.html") { _, response ->
-		response.send("hi!!")
+		val simpleHTML =
+				HTML(body = body { arrayListOf(
+						paragraph {
+							"hiii"
+						}
+				)}).inHTML
+		response.send(simpleHTML)
 	}
-
-	// - Console output
-	// inside the server closure or using: server.listen {}
 }

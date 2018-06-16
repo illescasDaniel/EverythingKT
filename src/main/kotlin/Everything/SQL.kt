@@ -93,8 +93,8 @@ class SQL {
 				return this
 			}
 
-			override fun from(vararg str: String): WhereInterface {
-				query += " FROM ${str.joinToString(", ")}"
+			override fun from(vararg table: String): WhereInterface {
+				query += " FROM ${table.joinToString(", ")}"
 				return this
 			}
 
@@ -163,13 +163,13 @@ class SQL {
 				return this
 			}
 
-			override fun orderBy(vararg condition: String): OrderByOrderInterface {
-				query += " ORDER BY ${condition.joinToString(", ")}"
+			override fun orderBy(vararg columns: String): OrderByOrderInterface {
+				query += " ORDER BY ${columns.joinToString(", ")}"
 				return this
 			}
 
-			override fun orderBy(vararg condition: SQLColumn): OrderByOrderInterface {
-				query += " ORDER BY  ${condition.joinToString(", ") { it.name }}"
+			override fun orderBy(vararg columns: SQLColumn): OrderByOrderInterface {
+				query += " ORDER BY  ${columns.joinToString(", ") { it.name }}"
 				return this
 			}
 
