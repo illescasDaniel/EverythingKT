@@ -21,7 +21,6 @@ class HTML(var fileName: String = "index",
 		fun toFile(pages: ArrayList<HTML>) {
 
 			FileSystem.makeDir("./public")
-			//FileSystem.copyFile("./src/main/kotlin/Everything/minifiedKotlin.js", "./public")
 			FileSystem.makeDir("public/kotlin2JS")
 			FileSystem.copyFile("node_modules/kotlin/kotlin.js", "public/kotlin2JS/index.js")
 
@@ -42,12 +41,9 @@ class HTML(var fileName: String = "index",
 
 	fun toFile() {
 
-		//FileSystem.makeDirHere("public")
 		FileSystem.makeDir("./public")
 
 		if (this.hasScripts) {
-			//FileSystem.copyFile("src/main/kotlin/Everything/minifiedKotlin.js", "public/minifiedKotlin.js")
-			//FileSystem.copyFile("Kotlin2JavaScript/out/production/Kotlin2JavaScript/lib/kotlin.js", "public/index.js")
 			FileSystem.makeDir("public/kotlin2JS")
 			FileSystem.copyFile("node_modules/kotlin/kotlin.js", "public/kotlin2JS/index.js")
 		}
@@ -60,24 +56,7 @@ class HTML(var fileName: String = "index",
 		val fileNameToWrite = "public/${this.fileName}.html"
 		FileSystem.writeFile(fileNameToWrite, this.inHTML)
 	}
-
-	// FIXME: not working!
-	fun elementWith(id: String, container: ArrayList<Element> = this.body.nested): Element? {
-
-		// var allElements = ArrayList<Element>()
-
-		for (element in container) {
-			if (element.id.toString() == id) {
-				return element
-			} else if (element.nested.isNotEmpty()) {
-				elementWith(id, element.nested)//element.elements.find { it.id == id }
-			}
-		}
-
-		//println("wtf???")
-		return null
-	}
-
+	
 	override val inHTML: String by lazy {
 		this.nested = arrayListOf(metadata, styleSheet, this.body, this.script.asElement)
 		super.inHTML
